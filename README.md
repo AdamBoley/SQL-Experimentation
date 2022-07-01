@@ -118,6 +118,9 @@ Install SQL Alchemy:
 Create new file for the SQL Alchemy expression language:
 `touch sql-expression.py`
 
+Set the postgres environment variable:
+`set_pg`
+
 Find column names (also called column headers):
 `SELECT * FROM "Artist" WHERE false`
 We can see that the Artist table has two columns - ArtistId and Name
@@ -129,11 +132,31 @@ Find column headers for the Album and Track tables:
 Run the commands:
 `python3 sql-expression.py`
 
-Note that there is no need to run the `set_pg` command to set up the enviroment variable
-
 
 
 ### SQL Alchemy ORM
 
 New file for exploring the SQL Alchemy ORM methods:
 `touch sql-orm.py`
+
+Set the postgres environment variable:
+`set_pg`
+
+Run the file:
+`python3 sql-orm.py`
+
+
+### CRUD
+
+New file for CRUD methods:
+`touch sql-crud.py`
+
+Set the postgres environment variable:
+`set_pg`
+
+Run the file:
+`python3 sql-crud.py`
+
+
+
+
