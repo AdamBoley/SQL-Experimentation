@@ -94,3 +94,46 @@ Transcribe output of a query to that JSON file:
 Note that these last two must be run one after another. I think that `\o test.json` both creates and selects the file to be transcribed into. 
 Without this, the transcribe command fails, even if it is valid and properly constructed
 
+
+### Python
+
+Install the psycopg2 database adapter:
+`pip3 install psycopg2`
+
+create a Python file to hold SQL queries:
+`touch sql-psycopg2`
+
+Set the postgres environment variable:
+`set_pg`
+
+Run the python file:
+`python3 sql-psycopg2`
+
+
+### SQl Alchemy
+
+Install SQL Alchemy:
+`pip3 install SQLAlchemy`
+
+Create new file for the SQL Alchemy expression language:
+`touch sql-expression.py`
+
+Find column names (also called column headers):
+`SELECT * FROM "Artist" WHERE false`
+We can see that the Artist table has two columns - ArtistId and Name
+
+Find column headers for the Album and Track tables:
+`SELECT * FROM "Album" WHERE false`
+`SELECT * FROM "Track" WHERE false`
+
+Run the commands:
+`python3 sql-expression.py`
+
+Note that there is no need to run the `set_pg` command to set up the enviroment variable
+
+
+
+### SQL Alchemy ORM
+
+New file for exploring the SQL Alchemy ORM methods:
+`touch sql-orm.py`
